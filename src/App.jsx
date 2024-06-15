@@ -5,6 +5,7 @@ import { Navigate, BrowserRouter as Router, Routes, Route } from "react-router-d
 import Signout from './pages/signout';
 import supabase from './supabase/supabaseClient';
 import Signup from './pages/signup';
+import Tables from './pages/table/table.jsx';
 
 function App() {
   const [session, setSession] = useState(null);
@@ -59,7 +60,7 @@ function App() {
         <Route path='/login' element={<Login />} />
         <Route path='/logout' element={<Signout />} />
         <Route path='/signup' element={<Signup />} />
-        <Route path="/" element={renderProtectedRoute(Home)} />
+        <Route path="/" element={renderProtectedRoute(Tables)} />
       </Routes>
     </Router>
   );
